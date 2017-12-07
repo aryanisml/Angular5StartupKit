@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/SharedModule';
+import { IndexComponent } from './home/IndexComponent';
+import { AppRoutingModule } from './app.routing';
+import { VehiclesModule } from './vehicles/VehiclesModule';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, IndexComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule,
+    AppRoutingModule,
+    VehiclesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

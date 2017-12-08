@@ -1,12 +1,8 @@
 import { Injectable } from "@angular/core";
-import { Model, Factory, Car } from "./models";
+import { Model, Factory, Car } from "../models";
 import { Http, Response, Headers, RequestOptions } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 import { IVehicle } from "../contracts";
-import { IVehicle } from "../contracts";
-import { IVehicle } from "../contracts";
-
-
 
 @Injectable()
 export class FactoryService {
@@ -44,7 +40,7 @@ export class FactoryService {
         let body = JSON.stringify(vehicle);
 
         return this.http
-            .post(url, body, options)
+            .put(url, body, options)
             .map(()=> vehicle)
             .catch(this.handleError);
     }

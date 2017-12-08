@@ -1,0 +1,18 @@
+<div class="thumbnail">
+        <div>VIN</div>
+        <h5>{{vehicle.id}}</h5>
+
+        <div>Model</div>
+        <h5>{{vehicle.model.name}} {{vehicle.model.year}}</h5>
+
+        <div>Make</div>
+        <h5>{{vehicle.make}}</h5>
+
+        <div>Color</div>
+        <h5 *ngIf="!isEditing">{{vehicle.color}}</h5>
+        <h5 *ngIf="isEditing"><input type="text" class="form-control" [(ngModel)]="vehicle.color" /></h5>
+        
+        <button class="btn btn-primary" (click)="isEditing = true" *ngIf="!isEditing"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Edit</button>
+        <button class="btn btn-success" (click)="updateWasClicked()" *ngIf="isEditing"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Done</button>
+        <button class="btn btn-warning pull-right" (click)="deleteWasClicked()"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete</button>
+</div>

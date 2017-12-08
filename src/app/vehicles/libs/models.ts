@@ -25,7 +25,7 @@ class Vehicle implements IVehicle {
 
     displayInfo() {
         return `
-            Vin:${this.vin}
+            Vin:${this.id}
             Make:${this.make}
             Model:${this.model.year} - ${this.model.name}
             Color:${this.color}`;
